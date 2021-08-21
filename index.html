@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyAKmumBILFCW1qIIUEoj7CqP4Y1rDkC9zo",
+    authDomain: "todo-saims-fmp.firebaseapp.com",
+    projectId: "todo-saims-fmp",
+    storageBucket: "todo-saims-fmp.appspot.com",
+    messagingSenderId: "234472334545",
+    appId: "1:234472334545:web:d5761a6ad7a306cdccd1f0",
+    measurementId: "G-7KVT1CH3VV"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</head>
+<body>
+  
+            <div class="wrap">
+            <h1>Todo App</h1>
+          <input type="text" id="todo-item">
+          <button  onclick="addTodo()" class="addBtn"><i class="fa fa-plus"></i></button>
+          <button onclick="deleteAll()" class="deleteBtn"><i class="fa fa-trash"></i></button>
+          <br /> 
+          <div class="list">
+            <h2><i class="fa fa-list">Todo List &nbsp;</i></h2> 
+            <ul id="list">
+                  
+                </ul>
+          </div> 
+          
+          </div>
+  
+    <script src="./app.js"></script>
+</body>
+</html>
